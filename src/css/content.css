@@ -2,6 +2,88 @@
     display: none;
 }
 
+body {
+    overflow-y: auto !important;
+}
+
+/* * {
+    box-sizing: border-box;
+} */
+
+.show {
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+.center-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-yt-logo {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 247px;
+    padding: 10px;
+    display: block;
+    margin-bottom: 22px;
+}
+
+.inp-wrap {
+    display: flex;
+    height: 44px;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    margin: 0 0 20px 0;
+    width: 100%;
+    max-width: 34%;
+    padding: 5px 8px 0 14px;
+}
+
+.inp-box {
+    height: 34px;
+    display: flex;
+    flex: 100%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin-top: 2px;
+    color: rgba(0,0,0,.87);
+}
+
 .search-btn {
-    padding: 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.search-btn:hover {
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+    
 }
