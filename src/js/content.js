@@ -32,8 +32,8 @@ function init() {
     // TODO
     /**
      * - Create top & bottom container
-     * - Add click handler to the input box and the button
-     * - Navigate to YouTube search page
+     * - Add click handler to the input box and the button ✅
+     * - Navigate to YouTube search page ✅
      * - Add bottom link
      * - Handle bottom link to redirect to clean page
      */
