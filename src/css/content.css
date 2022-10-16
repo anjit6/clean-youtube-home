@@ -87,3 +87,9 @@ body {
     color: #202124;
     
 }
+
+@media (prefers-color-scheme: dark) {
+    .wrapper {
+      background-color: #202124;
+    }
+  }

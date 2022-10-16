@@ -18,15 +18,16 @@ function init() {
     // input box
     let inpWrap = document.createElement('div');
     inpWrap.classList.add('inp-wrap');
-    let inp = document.createElement('input');
-    inp.classList.add('inp-box');
-    inpWrap.appendChild(inp);
+    let inpEl = document.createElement('input');
+    inpEl.id = 'queryInput';
+    inpEl.classList.add('inp-box');
+    inpWrap.appendChild(inpEl);
 
     // search button
-    let searchButton = document.createElement('button');
-    searchButton.setAttribute('id', 'btnSearch');
-    searchButton.classList.add('search-btn');
-    searchButton.innerHTML = 'Search YouTube';
+    let searchButtonEl = document.createElement('button');
+    searchButtonEl.setAttribute('id', 'btnSearch');
+    searchButtonEl.classList.add('search-btn');
+    searchButtonEl.innerHTML = 'Search YouTube';
 
     // TODO
     /**
@@ -37,9 +38,25 @@ function init() {
      * - Handle bottom link to redirect to clean page
      */
 
+    let redirectToSearchPage = function () {
+        let sQuery = document.getElementById('queryInput');
+        sQuery = sQuery ? sQuery.value : '';
+        if (sQuery) {
+            window.location = 'https://www.youtube.com/results?search_query=' + sQuery;
+        }
+    };
+
+    inpEl.addEventListener('keyup', (e) => {
+        if (e.key === 'Enter') {
+            redirectToSearchPage();
+        }
+    });
+
+    searchButtonEl.addEventListener('click', redirectToSearchPage);
+
     centerWrap.appendChild(ytLogo);
     centerWrap.appendChild(inpWrap);
-    centerWrap.appendChild(searchButton);
+    centerWrap.appendChild(searchButtonEl);
 
     wrapper.appendChild(centerWrap);
     document.body.appendChild(wrapper);
