@@ -6,6 +6,7 @@
     "author": "Anji Beeravalli",
     "content_scripts": [
       {
+        "all_frames": true,
         "run_at": "document_start",
         "matches": [
           "https://youtube.com/",
@@ -26,6 +27,7 @@
       }
     ],
     "background": {
+      "persistent": true,
       "service_worker": "/src/js/background.js"
     },
     "permissions": [
